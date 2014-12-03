@@ -19,7 +19,7 @@
   app.directive('settings', function() {
     return {
       restrict: 'E',
-      templateUrl: 'settings.html'
+      templateUrl: 'templates/settings.html'
     }
   });
 })();

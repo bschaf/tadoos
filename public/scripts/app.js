@@ -70,14 +70,14 @@ var app = angular.module('tadoos', ['settings', 'firebase']);
   app.directive('tadoos', function() {
     return {
       restrict: 'E',
-      templateUrl: 'tadoos.html'
+      templateUrl: 'templates/tadoos.html'
     }
   })
 
   app.directive('tadooForm', function() {
     return {
       restrict: 'E',
-      templateUrl: 'tadoo-form.html'
+      templateUrl: 'templates/tadoo-form.html'
     }
   })
 
