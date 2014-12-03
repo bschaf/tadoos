@@ -1,0 +1,9 @@
+<div ng-controller="SettingsCtrl" class="phone">
+  <p>
+    A text message will be sent to this number when a tadoo is marked complete.
+  </p>
+  <form name="submitTel" ng-submit="submitTel.$valid && save(settings)" novalidate>
+    <input type="tel" ng-model="settings.phone" pattern="[0-9]{10}" placeholder="tel: 3235331241">
+    <button type="submit">save</button>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+  <link rel="stylesheet" href="public/styles/app.css">
+</head>
+<body ng-app="tadoos">
+  <div ng-controller="TadoosCtrl" ng-cloak>
+    <header role="banner">
+      <settings></settings>
+
+      <section>
+        <h1>tadoos</h1>
+
+        <tadoo-form></tadoo-form>
+      </section>
+    </header>
+
+    <main role="main">
+      <div ng-show="tadoos.loading" class="loading">loading...</div>
+
+      <tadoos></tadoos>
+    </main>
+  </div>
+
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/firebase/firebase.js"></script>
+  <script type="text/javascript" src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script type="text/javascript" src="public/scripts/app.js"></script>
+  <script type="text/javascript" src="public/scripts/settings.js"></script>
+</body>
+</html>

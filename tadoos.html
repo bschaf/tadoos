@@ -1,0 +1,15 @@
+<input type="search" ng-model="filterTadoo" ng-show="!tadoos.loading && tadoos.length" class="filter" placeholder="filter">
+
+<ul>
+  <li ng-repeat="tadoo in tadoos | filter:filterTadoo" ng-class="{ complete:tadoo.isComplete, editing:tadoo == isEditing }">
+    <input type="checkbox" ng-change="markComplete(tadoo)" ng-model="tadoo.isComplete" title="mark item as done">
+
+    <span ng-class="{ complete:tadoo.isComplete }" ng-click="edit(tadoo)" title="click to edit">{{tadoo.name}}</span>
+    <input type="text" ng-change="update(tadoo)" ng-model="tadoo.name" ng-blur="focus(tadoo)" tadoo-focus="tadoo == isEditing" class="edit-tadoo" autofocus>
+
+    <a ng-click="delete(tadoo)" class="delete" title="remove item"></a>
+  </li>
+</ul>
+
+<p ng-show="!tadoos.loading && !tadoos.length">No tadoos! Add some!</p>
+<p ng-show="!remainingCount && tadoos.length">You've done everything!</p>
